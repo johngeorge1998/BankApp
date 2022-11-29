@@ -34,5 +34,57 @@ html-> view
 
 data sharing in both direction(ts->html, html->ts)
 
+    i) ngmodel binding - import formsModule in app.module.ts
+    [(ngModel)]="property_name"
+
+
+    Angular Routing
+
+    To set path for component
+
+    {
+        path;value,component:component_name
+    },
+
+
+    login
+    {
+        path:'',component:LoginComponent
+    },
+
+
+3)Angular services
+
+to hold redundant data
+
+To create new service ng g s service_name
+
+
+4)Dependency injection
+
+To share data between two dependent classes
+
+constructor(private ds:DataService)
+
+5) Angular directives-
+    To manipulate DOM
+
+    a)Component directives(array)
+
+    b)Structural directives(table)
+        i) *ngFor
+
+
+
+    6)Angular forms
+
+        a)template driven froms(first design html template)
+        b)Model driven froms(first design model ts file)
+            1)reactive forms
+            formGroup,array,control
+            for advanced validation
+
+
+
 
 
