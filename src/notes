@@ -73,6 +73,7 @@ constructor(private ds:DataService)
 
     b)Structural directives(table)
         i) *ngFor
+        ii)ngIf
 
 
 
@@ -83,6 +84,28 @@ constructor(private ds:DataService)
             1)reactive forms
             formGroup,array,control
             for advanced validation
+
+7) Local storage
+-setItem - to store data in local storage
+-getItem - To get data from ,ocal storage
+- removeItem - To remove data from local storage
+
+
+
+8) parent child communication
+
+     parent-> child communucation
+     child -> parent communication
+
+     eg:
+     dashboard ->
+     delete -> child
+
+9) Angular pipes
+
+
+
+
 
 
 

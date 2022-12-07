@@ -7,13 +7,17 @@
         <h6>{{aim}}</h6>
          <!-- string interpolation -->
     </div>
-    <form class="p-3 mt-3">
+    <form [formGroup]="logForm" class="p-3 mt-3">
         <div class="form-field d-flex align-items-center">
-            <input [(ngModel)]="acno" type="text" name="userName" id="login_acno" [placeholder]="account">
+            <input formControlName="acno" type="text" name="userName" id="login_acno" [placeholder]="account">
         </div>
+        <div *ngIf="this.logForm.get('acno')?.errors && this.logForm.get('acno')?.touched" style="color:red">Invalid account number</div>
+
         <div class="form-field d-flex align-items-center">
-            <input [(ngModel)]="pswd" type="password" name="password" id="login_pswd" placeholder="Password">
+            <input formControlName="pswd" type="password" name="password" id="login_pswd" placeholder="Password">
         </div>
+        <div *ngIf="this.logForm.get('pswd')?.errors && this.logForm.get('pswd')?.touched" style="color:red">Invalid password</div>
+
         <button class="btn mt-3" (click)="login()" type="button">Login</button>
     </form>
     <div class="text-center fs-6">
